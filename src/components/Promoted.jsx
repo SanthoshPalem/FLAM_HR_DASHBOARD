@@ -35,7 +35,7 @@ const Promoted = () => {
   if (promotedList.length === 0) return <p>No promoted employees yet.</p>
 
   return (
-    <div style={{ maxWidth: 800, margin: '2rem auto' }}>
+    <div style={{ maxWidth: 800, margin: '2rem auto', background: 'var(--body_background)' ,color:'var(--body_color)'}}>
       <h2>Promoted Employees</h2>
       <ul style={{ listStyle: 'none', padding: 0 }}>
         {promotedList.map(emp => (

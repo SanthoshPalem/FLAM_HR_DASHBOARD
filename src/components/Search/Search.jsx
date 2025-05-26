@@ -49,19 +49,20 @@ const Search = () => {
   }, [query, allEmployees])
 
   return (
-    <div className="p-4 space-y-4">
+    <div className="p-4 space-y-4" >
       <input
         type="text"
         placeholder="Search by name, email, or department"
         className="search-input"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        style={{background: 'var(--body_background)' ,color:'var(--body_color)'}}
       />
 
       {loading && <p>Loading...</p>}
       {error && <p className="text-red-500">Error: {error}</p>}
 
-      <div className="card-grid">
+      <div className="card-grid" style={{background: 'var(--body_background)' ,color:'var(--body_color)'}}>
         {results.map(emp => (
           <EmployeeCard
             key={emp.id}

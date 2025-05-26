@@ -1,32 +1,7 @@
-/* Light mode */
-:root {
-  --bg-color: #fff;
-  --text-color: #222;
-  --primary-color: #007bff;
-  --card-bg: #f9f9f9;
-}
 
-/* Dark mode */
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #ddd;
-  --primary-color: #3399ff;
-  --card-bg: #1f1f1f;
-}
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: var(--body_background);
+  color: var(--body_color);
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Example usage */
-.navbar {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-}
-
-.employee-card {
-  background-color: var(--card-bg);
-  color: var(--text-color);
 }

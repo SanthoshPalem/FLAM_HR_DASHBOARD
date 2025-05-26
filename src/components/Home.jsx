@@ -12,9 +12,12 @@ import Promoted from './Promoted'
 
 const Home = () => {
   return (
+    <div>
     <EmployeeProvider>
     <BrowserRouter>
-      <Navbar />
+    <div >
+    <Navbar />
+    </div>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/employee/:id" element={<EmployeeDetails />} />
@@ -25,6 +28,7 @@ const Home = () => {
       </Routes>
     </BrowserRouter>
     </EmployeeProvider>
+    </div>
   )
 }
 

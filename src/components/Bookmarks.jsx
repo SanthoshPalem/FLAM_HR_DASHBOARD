@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { color } from 'chart.js/helpers'
 
 const Bookmarks = () => {
   const [bookmarks, setBookmarks] = useState([])
@@ -35,7 +36,8 @@ const Bookmarks = () => {
   if (bookmarks.length === 0) return <p>No bookmarks yet.</p>
 
   return (
-    <div style={{ maxWidth: 800, margin: '2rem auto' }}>
+    <div style={{ maxWidth: 800, margin: '2rem auto', background: 'var(--body_background)' ,color:'var(--body_color)'}}
+>
       <h2>Bookmarked Employees</h2>
       <ul style={{ listStyle: 'none', padding: 0 }}>
         {bookmarks.map(emp => (

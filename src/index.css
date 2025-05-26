@@ -1,33 +1,24 @@
-/* Light mode variables */
-:root {
-  --bg-color: #ffffff;
-  --text-color: #222222;
-  --primary-color: #007bff;
-  --card-bg: #f9f9f9;
+:root{
+  --body_background: rgb(255, 255, 255);
+  --body_color: black;
+  --card_background: #ffffff;
+  --card_color: #000000;
+  --button_background: #007bff;
+}
+[data-theme='dark'] {
+  --body_background: #121212;
+  --body_color: #e0e0e0;
+  --card_background: #1f1f1f;
+  --card_color: #e0e0e0;
+  --button_background: #bb86fc;
+}
+*{
+  transition: all 0.3s ease;
 }
 
-/* Dark mode overrides */
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #dddddd;
-  --primary-color: #3399ff;
-  --card-bg: #1f1f1f;
-}
-
-/* Apply variables globally */
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Example usage in components */
-.navbar {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-}
-
-.employee-card {
-  background-color: var(--card-bg);
-  color: var(--text-color);
+body, #root {
+  background: var(--body_background);
+  color: var(--body_color);
+  transition: background 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
 }

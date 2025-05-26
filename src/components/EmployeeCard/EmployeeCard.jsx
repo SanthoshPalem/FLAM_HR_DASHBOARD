@@ -1,3 +1,4 @@
+
 import React, { useMemo } from 'react';
 import './EmployeeCard.css';
 
@@ -17,17 +18,20 @@ const EmployeeCard = ({
     age,
     image,
     company,
-    rating,
+    feedback,
   } = employee;
 
   const name = `${firstName} ${lastName}`;
   const department = company?.department || 'N/A';
   const bio = company?.title || '';
 
-  // Fallback: generate random rating once per render
-  const performanceRating = useMemo(() => {
-    return rating !== undefined ? rating : Math.floor(Math.random() * 5) + 1;
-  }, [rating]);
+  // ⬇️ Memoized average rating from feedback
+  const feedbackRating = useMemo(() => {
+    if (!feedback || feedback.length === 0) return null;
+
+    const total = feedback.reduce((sum, item) => sum + (item.score || 0), 0);
+    return Math.round(total / feedback.length);
+  }, [feedback]);
 
   const renderStars = (count) => {
     return [...Array(5)].map((_, i) => (
@@ -56,10 +60,18 @@ const EmployeeCard = ({
         <p><strong>Dept:</strong> {department}</p>
         <p className="bio">{bio}</p>
 
-        <div className="stars" aria-label={`Rating: ${performanceRating} out of 5`}>
-          <span className="label">Rating:</span>
-          {renderStars(performanceRating)}
-        </div>
+        {feedbackRating !== null && (
+          <div className="stars" aria-label={`Rating: ${feedbackRating} out of 5`}>
+            <span className="label">Rating:</span>
+            {renderStars(feedbackRating)}
+          </div>
+        )}
+
+        {feedbackRating === null && (
+          <div className="stars" aria-label="No feedback rating">
+            <span className="label">Rating:</span> <em>No feedback</em>
+          </div>
+        )}
 
         <div className="actions">
           <button
@@ -97,3 +109,4 @@ const EmployeeCard = ({
 };
 
 export default EmployeeCard;
+

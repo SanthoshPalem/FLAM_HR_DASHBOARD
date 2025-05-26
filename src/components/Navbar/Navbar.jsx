@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import Darkmode from '../Darkmode/Darkmode'; // ✅ Importing the Darkmode component
 
-const Navbar = ({ darkMode, setDarkMode }) => {
+const Navbar = () => {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-title">HR Dashboard</Link>
@@ -12,16 +13,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <Link to="/bookmarks" className="navbar-link">Bookmarks</Link>
         <Link to="/promoted" className="navbar-link">Promoted</Link>
         <Link to="/analytics" className="navbar-link">Analytics</Link>
-
-        {/* <button
-          onClick={() => setDarkMode(prev => !prev)}
-          className="dark-mode-toggle"
-          aria-label="Toggle dark mode"
-          style={{ marginLeft: '1rem', padding: '0.25rem 0.5rem' }}
-        >
-          {darkMode ? 'Light Mode' : 'Dark Mode'}
-        </button> */}
       </div>
+
+      {/* ✅ Dark mode toggle component placed here */}
+      <Darkmode />
     </nav>
   );
 };

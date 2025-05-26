@@ -77,7 +77,7 @@ const Dashboard = () => {
   if (error) return <p>Error: {error}</p>
 
   return (
-    <div className="card-grid">
+    <div className="card-grid" style={{background: 'var(--body_background)' ,color:'var(--body_color)'}}>
       {employees.map(emp => (
         <EmployeeCard
           key={emp.id}
