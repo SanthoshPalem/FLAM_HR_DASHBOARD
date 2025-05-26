@@ -1,0 +1,33 @@
+/* Light mode variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --primary-color: #007bff;
+  --card-bg: #f9f9f9;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #dddddd;
+  --primary-color: #3399ff;
+  --card-bg: #1f1f1f;
+}
+
+/* Apply variables globally */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Example usage in components */
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.employee-card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
