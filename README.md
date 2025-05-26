@@ -102,3 +102,41 @@ Extend backend API for real-world usage.
 
 
 --------------------------  SCREEN SHOTS ------------------------------
+
+DASHBOARD
+
+![image](https://github.com/user-attachments/assets/09f7e7cb-1a3f-43c8-a4b9-23a67e3321a9)
+
+SEARCH
+
+![image](https://github.com/user-attachments/assets/c5b89f4c-bd78-4fdb-81b6-7047d28952df)
+
+BOOKMARKS
+
+![image](https://github.com/user-attachments/assets/043de788-c660-4896-abef-f33553ecb80b)
+
+PROMOTIONS
+
+![image](https://github.com/user-attachments/assets/fa16deb7-f013-4b52-9202-5b2247ac2567)
+
+ANALYTICS
+
+![image](https://github.com/user-attachments/assets/c5edfb06-328d-474d-be58-4b4d6140aa9d)
+
+VIEW/OVERVIEW
+
+![image](https://github.com/user-attachments/assets/9a25fb72-4129-426e-b861-6059f3ccdd3a)
+
+PROJECTS
+
+![image](https://github.com/user-attachments/assets/539dfd1c-1ff7-43cd-950d-f67421eacf05)
+
+FEEDBACK/FEEDBACK FORM
+
+![image](https://github.com/user-attachments/assets/a55ca4bd-8c67-4e2c-8936-36b0212cacf9)
+
+
+
+
+
+
