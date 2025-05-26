@@ -49,27 +49,36 @@ Project Structure
 
 ![image](https://github.com/user-attachments/assets/6e0f38b0-27a2-447b-b5d9-907f14ae436b)
 
-API Endpoints
+
+API Endpoints:
 
 GET /employees
+
 Fetch a list of all employees to show in the dashboard, employee list, or cards.
 
 GET /employees/:id
+
 Fetch details for a particular employee, including personal info, feedback, projects, etc.
 
 PATCH /employees/:id
+
 Update certain parts of employee data, e.g., append new feedback or update fields.
 
 GET /bookmarks
+
 If bookmarks are stored in a separate backend structure, get the list or stats for bookmarks.
 
 POST /bookmarks/:id or DELETE /bookmarks/:id
+
 Add or remove bookmarks for an employee.
 
 POST /promotions/:id or DELETE /promotions/:id
+
 Promote or undo promotion status for an employee.
 
-Usage
+
+Usage:
+
 Browse employee list on the homepage.
 
 Click View on an employee card to see detailed info.
@@ -82,9 +91,14 @@ Bookmark or promote employees from the employee card.
 
 View analytics charts for department ratings and bookmark trends.
 
-Customization
+
+Customization:
+
 Update db.json with your employee data.
 
 Modify styles in CSS files or switch to Tailwind CSS if preferred.
 
 Extend backend API for real-world usage.
+
+
+--------------------------  SCREEN SHOTS ------------------------------
